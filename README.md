@@ -15,9 +15,9 @@ The easiest way to create a server is with a handler object.  All incoming calls
     }
 
     var rpc = require('msgpack-rpc');
-    rpc.createServer();
-    rpc.setHandler(handler);
-    rpc.listen(8000);
+    var server rpc.createServer();
+    server.setHandler(handler);
+    server.listen(8000);
 
 a corresponding client might look like:
 
@@ -25,7 +25,7 @@ a corresponding client might look like:
       c.invoke('add', 5, 4, function(err, response) {
         assert.equal(9, response);
         c.close();
-      }
+      });
     });
 
 
