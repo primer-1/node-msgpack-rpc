@@ -7,7 +7,7 @@ Simple Usage
 ------------
 
 The easiest way to create a server is with a handler object.  All incoming calls will be invoked on the handler object:
-    
+
     var handler = {
       'add' : function(a, b, response) {
          response.result( a + b );
@@ -20,6 +20,9 @@ The easiest way to create a server is with a handler object.  All incoming calls
     server.listen(8000);
 
 a corresponding client might look like:
+
+    var rpc = require('msgpack-rpc');
+    var assert = require('assert');
 
     var c = rpc.createClient(8000, '127.0.0.1', function() {
       c.invoke('add', 5, 4, function(err, response) {
@@ -55,7 +58,7 @@ This module also provides a session pool which allows you to re-use client conne
     var sp = new SesssionPool();
     sp.getClient(8000, '127.0.0.1').invoke('hello','world', function(err, response) { ... });;
     sp.getClient(8001, '127.0.0.1').invoke('hello','world', function(err, response) { ... });;
-    
+
     // Uses same tcp connection as above
     sp.getClient(8000, '127.0.0.1').invoke('goodbye','world', function(err, response) { ... });;
 
