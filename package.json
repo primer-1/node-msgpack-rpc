@@ -12,6 +12,6 @@
     "lib": "lib"
   },
   "dependencies": {
-    "msgpack5": "^1.4.0"
+    "msgpack5": "^1.5.0"
   }
 }
