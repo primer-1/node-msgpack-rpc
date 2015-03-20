@@ -1,4 +1,4 @@
-var rpc = require('msgpack-rpc');
+var rpc = require('silk-msgpack-rpc');
 var assert = require('assert');
 
 var client = rpc.createClient(8000);
