@@ -1,6 +1,6 @@
 {
   "name": "silk-msgpack-rpc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "node-msgpack-rpc is an implementation of the Msgpack-RPC protocol specification for node.js",
   "homepage": "https://github.com/silkedit/node-msgpack-rpc",
   "main": "./lib/msgpack-rpc",
@@ -12,7 +12,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "msgpack": "^1.0.2"
+    "silk-msgpack": "^1.0.2"
   },
 	"license" : "MIT"
 }
